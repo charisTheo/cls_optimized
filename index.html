@@ -83,6 +83,14 @@
             object-fit: fill;
              height: 50%;
          }
+        #youtube-placeholder {
+          min-width: 400px;
+          height: 450px;
+          background-color: #ccc;
+          display: inline-block;
+          text-align: center;
+          padding: 200px 0;
+        }
       </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.6/tarteaucitron.js" integrity="sha512-gXl6bTROZxxymUcoVPuH93os9XPq+SrORZCtUiYDNoaxrrJhDX9o0b/kl3a+MeQJxeYqUBejvkCi4gziE6xrqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -169,6 +177,9 @@
         
         <section class="container hero-container">
             <div class="image-hero">
+                <div id='youtube-placeholder'>
+                  Loading video...
+                </div>
                 <div class="img" id="image-hero" >
                 </div>
                 
@@ -363,8 +374,10 @@
               iframe.setAttribute( "sandbox", "allow-same-origin allow-scripts" );
               iframe.setAttribute('width', '400')
               iframe.setAttribute('height', '450')
-              const imageHeroDiv = document.getElementById('image-hero');
-              imageHeroDiv.insertBefore(iframe, imageHeroDiv.firstChild)
+              const youtubePlaceholder = document.getElementById('youtube-placeholder');
+              youtubePlaceholder.textContent = ''
+              youtubePlaceholder.style.padding = 0
+              youtubePlaceholder.appendChild(iframe)
               // dynamic content
               
             }, 5000)
