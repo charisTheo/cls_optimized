@@ -66,10 +66,11 @@
           white-space: nowrap;
           -webkit-overflow-scrolling: touch;
         }
-        .hero {
+        #image-hero > img {
+          aspect-ratio: 4 / 5;
           width: 500px;
           object-fit: cover;
-         }
+        }
          .images-gallery {
             width: 100px;
             height: 100px;
@@ -180,7 +181,8 @@
                 <div id='youtube-placeholder'>
                   Loading video...
                 </div>
-                <div class="img" id="image-hero" >
+                <div id="image-hero">
+                  <img src="assets/img/gallery/africa.jpeg" fetchpriority="high" />
                 </div>
                 
             </div>
