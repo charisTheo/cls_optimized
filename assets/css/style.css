@@ -3,7 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 body {
-    padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
     font-family: 'Dosis', sans-serif;
@@ -87,9 +86,8 @@ body {
     width: 100%;
     height: 50px;
     background-color: cyan;
-    position: fixed;
-    top: 0;
     text-align: center;
+    animation: appear-bottom 0.5s linear forwards;
   }
   
   .hero-container {
@@ -145,3 +143,11 @@ body {
     }
   }
   
+@keyframes appear-bottom {
+  from {
+    transform: translateY(100%)
+  }
+  to {
+    transform: translateY(0)
+  }
+}

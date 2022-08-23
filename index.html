@@ -361,11 +361,10 @@
             setTimeout(function(){
               //create an add
               const adDiv = document.createElement('DIV');
-              adDiv.classList.add('navbar','fixed-top','ad');
+              adDiv.classList.add('navbar','fixed-bottom','ad');
               adDiv.textContent = 'We are on sale now. Buy at 5% discount.'
               const bodyTag = document.getElementsByTagName('body')[0];
               // update dynamically the position of the navabar
-              document.getElementById('navbar').classList.remove('fixed-top')  
               bodyTag.insertBefore(adDiv, bodyTag.firstChild);  
 
               // create another add video randomly on the shop side
